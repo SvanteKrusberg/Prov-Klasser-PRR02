@@ -11,7 +11,10 @@ namespace PRR2_Prov__Klasser
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Visa bok?");
+            Console.WriteLine("Hur många kunder?");
+            int antalKunder = StringToInt(Console.ReadLine());
+            
+            Console.WriteLine("Vill du visa den bok du säljer?");
             Console.WriteLine("A: Ja");
             Console.WriteLine("B: Nej");
             string input = Console.ReadLine().ToLower();
@@ -41,5 +44,23 @@ namespace PRR2_Prov__Klasser
             Console.ReadLine();
 
         }
+
+        //En metod som omvandlar ett användar input till en int och som sedan returnerar den int:en!
+        static int StringToInt (string k)
+        {
+            int s;
+
+            while (!int.TryParse(k, out s))
+            {
+                Console.WriteLine("Skriv in ett korrekt värde tack :)");
+                k = Console.ReadLine();
+
+
+            }
+
+            return s;
+
+        }
+
     }
 }

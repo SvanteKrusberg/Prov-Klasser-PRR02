@@ -94,6 +94,8 @@ namespace PRR2_Prov__Klasser
             int p;
             p = actualValue * rarity;
 
+            //Multiplicerar priset med ett random värde mellan 50 och 150, dividerar sedan med 100 för att "effektivt"
+            //använda mig av en förändringsfaktor med hjälp av ints...
             p = p * generator.Next(51, 151);
 
             p = p / 100;
