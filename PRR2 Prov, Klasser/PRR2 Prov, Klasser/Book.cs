@@ -52,13 +52,14 @@ namespace PRR2_Prov__Klasser
 
         public string GetName()
         {
+            return name;
 
 
         }
 
         public string GetCategory()
         {
-
+            return category;
 
 
         }
